@@ -37,8 +37,11 @@ function exampleFunction(num1, num2) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
+function makePersonObject(id, name, email) {
   /* code here */
+  this.id = id;
+  this.name = name;
+  this.email = email;
 }
 
 /**
@@ -54,8 +57,9 @@ function makePersonObject(/* code here */) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
+function getName(name) {
   /* code here */
+  return `Hello, my name is ${this.name}`;
 }
 
 /**
@@ -71,8 +75,13 @@ function getName(/* code here */) {
  *         and returns a string like `Hello, my name is {name}`.
  *         where `{name}` is the name passed into `makeSmartPerson`.
 */
-function makeSmartPerson(/* code here */) {
+function makeSmartPerson(name, sum) {
   /* code here */
+  this.name = name;
+  this.sum = sum;
+  let speak = function () {
+    return `Hello, my name is ${this.name}`;
+  }
 }
 
 /**
