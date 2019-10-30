@@ -37,11 +37,9 @@ function exampleFunction(num1, num2) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(id, name, email) {
+function makePersonObject(id, name, email) { 
   /* code here */
-  this.id = id;
-  this.name = name;
-  this.email = email;
+  return ``;
 }
 
 /**
@@ -57,6 +55,8 @@ function makePersonObject(id, name, email) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
+
+// passed
 function getName(name) {
   /* code here */
   return `Hello, my name is ${this.name}`;
@@ -111,8 +111,9 @@ function getCarInfoByIndex(/* code here */) {
  * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
  * it will return `This is a Lincoln Town Car`.
 */
-function getLastCarInfo(/* code here */) {
+function getLastCarInfo(module) {
   /* code here */
+  return `This is a ${module.car_make} ${module.car_model}`
 }
 
 /**
@@ -196,6 +197,7 @@ function getGermanCars(/* code here */) {
  * const sum = function (a, b) {
  *   return a + b
  * }
+ 
  * 
  * const addFive = function(num) {
 *    return num + 5
@@ -205,7 +207,7 @@ function getGermanCars(/* code here */) {
  *   return num * 2
  * }
 */
-const sum = null; // code here!
+const sum = (a,b) =>  { return a + b };
 const addFive = null; // code here!
 const argTimesTwo = null; // code here!
 
@@ -222,8 +224,12 @@ const argTimesTwo = null; // code here!
  *         (1) causes the odometer in the object to be increased by the distance,
  *         (2) returns the updated value of the `odometer`.
 */
-function carMaker(/* code here */) {
+function carMaker(odometer) {
   /* code here */
+  for (d = 0; d < odometer; d++) {
+
+    return odometer
+  }
 }
 
 /// ////// END OF CHALLENGE /////////
