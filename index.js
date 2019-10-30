@@ -39,8 +39,16 @@ function exampleFunction(num1, num2) {
 */
 function makePersonObject(id, name, email) { 
   /* code here */
-  return ``;
+  const person = {
+    id: this.id,
+    name: this.name,
+    email: this.email
+  }
+
+  return this.person;
 }
+
+makePersonObject(5, 'Leia', 'leia@leia.com')
 
 /**
  * ### Challenge `getName`
@@ -59,7 +67,7 @@ function makePersonObject(id, name, email) {
 // passed
 function getName(name) {
   /* code here */
-  return `Hello, my name is ${this.name}`;
+  return `Hello, my name is ${name.name}`;
 }
 
 /**
@@ -77,12 +85,14 @@ function getName(name) {
 */
 function makeSmartPerson(name, sum) {
   /* code here */
-  this.name = name;
-  this.sum = sum;
-  let speak = function () {
-    return `Hello, my name is ${this.name}`;
+  // name = makePersonObject.name,
+  // sum = makePersonObject.sum,
+  // speak = function () {
+  //   return `Hello, my name is ${makePersonObject.name}`;
   }
-}
+
+// 
+// }
 
 /**
  * ### Challenge `getCarInfoByIndex`
@@ -96,8 +106,9 @@ function makeSmartPerson(name, sum) {
  * For example, if getCarInfoByIndex is invoked with the inventory and the number 0,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoByIndex(/* code here */) {
+function getCarInfoByIndex(array, index) {
   /* code here */
+  // return  'This is a' inventory.car_make inventory.car_model;
 }
 
 /**
@@ -113,7 +124,7 @@ function getCarInfoByIndex(/* code here */) {
 */
 function getLastCarInfo(module) {
   /* code here */
-  return `This is a ${module.car_make} ${module.car_model}`
+  // return `This is a ${module.car_make} ${module.car_model}`
 }
 
 /**
@@ -208,8 +219,8 @@ function getGermanCars(/* code here */) {
  * }
 */
 const sum = (a,b) =>  { return a + b };
-const addFive = null; // code here!
-const argTimesTwo = null; // code here!
+const addFive = (num) => {return num + 5 }; // code here!
+const argTimesTwo = (num) => { return num * 2}; // code here!
 
 /**
  * ### Challenge `carMaker`
@@ -226,10 +237,10 @@ const argTimesTwo = null; // code here!
 */
 function carMaker(odometer) {
   /* code here */
-  for (d = 0; d < odometer; d++) {
+  // for (d = 0; d < odometer; d++) {
 
-    return odometer
-  }
+  //   return odometer
+  // }
 }
 
 /// ////// END OF CHALLENGE /////////
