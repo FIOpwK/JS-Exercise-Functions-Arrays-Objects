@@ -67,6 +67,7 @@ makePersonObject(5, 'Leia', 'leia@leia.com')
 // passed
 function getName(name) {
   /* code here */
+
   return `Hello, my name is ${name.name}`;
 }
 
@@ -83,16 +84,24 @@ function getName(name) {
  *         and returns a string like `Hello, my name is {name}`.
  *         where `{name}` is the name passed into `makeSmartPerson`.
 */
-function makeSmartPerson(name, sum) {
+function makeSmartPerson(name) {
   /* code here */
-  // name = makePersonObject.name,
-  // sum = makePersonObject.sum,
-  // speak = function () {
-  //   return `Hello, my name is ${makePersonObject.name}`;
-  }
+  const character = {
+  name: name,
+  sum:  function(num1, num2) {
+    return num1 + num2;
+  },
 
-// 
-// }
+    speak:  function() {
+    return `Hello, my name is ${name}`
+   }
+
+  }
+  return character;
+
+}
+
+  
 
 /**
  * ### Challenge `getCarInfoByIndex`
@@ -195,8 +204,9 @@ function getOlderCars(/* code here */) {
  * made by either `Audi` or `Mercedes-Benz` or `Volkswagen` or `BMW`,
  * in the same order as they appear in the original inventory.
 */
-function getGermanCars(/* code here */) {
+function getGermanCars(array) {
   /* code here */
+ 
 }
 
 /**
@@ -218,9 +228,9 @@ function getGermanCars(/* code here */) {
  *   return num * 2
  * }
 */
-const sum = (a,b) =>  { return a + b };
-const addFive = (num) => {return num + 5 }; // code here!
-const argTimesTwo = (num) => { return num * 2}; // code here!
+const sum = (a,b) =>  { return a + b }; sum(4,5)
+const addFive = (num) => {return num + 5 }; addFive(5)// code here!
+const argTimesTwo = (num) => { return num * 2}; argTimesTwo(5)// code here!
 
 /**
  * ### Challenge `carMaker`
