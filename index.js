@@ -40,15 +40,15 @@ function exampleFunction(num1, num2) {
 function makePersonObject(id, name, email) { 
   /* code here */
   const person = {
-    id: this.id,
-    name: this.name,
-    email: this.email
+    id: id,
+    name: name,
+    email: email
   }
 
-  return this.person;
+  return person;
 }
 
-makePersonObject(5, 'Leia', 'leia@leia.com')
+// makePersonObject(5, 'Leia', 'leia@leia.com')
 
 /**
  * ### Challenge `getName`
@@ -107,7 +107,7 @@ function makeSmartPerson(name) {
  * ### Challenge `getCarInfoByIndex`
  * 
  * @instructions
- * getCarInfoByIndex takes two arguments:
+ * getCarInfoByIndex takes two arguments: (a, n)
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  *     (2) a number which is the desired index in the array.
  * getCarInfoByIndex returns a string in the format `This is a {car_make} {car_model}
@@ -117,7 +117,13 @@ function makeSmartPerson(name) {
 */
 function getCarInfoByIndex(array, index) {
   /* code here */
-  // return  'This is a' inventory.car_make inventory.car_model;
+  // array = [];
+  // index = array[index];
+  
+  // return `This is a ${array[index ]} ${array.car_model[index]}`
+
+return `This is a ${array[index].car_make} ${array[index].car_model}`
+
 }
 
 /**
@@ -134,6 +140,8 @@ function getCarInfoByIndex(array, index) {
 function getLastCarInfo(module) {
   /* code here */
   // return `This is a ${module.car_make} ${module.car_model}`
+  // return `This is a ${module.car_make} ${module.car_model}`
+  return `This is a ${module[module.length -1].car_make} ${module[module.length - 1].car_model}`
 }
 
 /**
@@ -160,8 +168,9 @@ function getCarInfoById(/* code here */) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * sortCarInventory returns an inventory that is sorted by car_model, ascending [A-Z].
 */
-function sortCarInventory(/* code here */) {
+function sortCarInventory(inventory) {
   /* code here */
+  // return inventory.sort(A-Z);
 }
 
 /**
@@ -173,8 +182,10 @@ function sortCarInventory(/* code here */) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
-function getModelYears(/* code here */) {
+function getModelYears(cars) {
   /* code here */
+  cars = [];
+  return cars.car_year;
 }
 
 /**
@@ -206,7 +217,10 @@ function getOlderCars(/* code here */) {
 */
 function getGermanCars(array) {
   /* code here */
- 
+for (let i = 0; i < array.length; i++)
+ {
+   return array
+ } 
 }
 
 /**
@@ -228,9 +242,9 @@ function getGermanCars(array) {
  *   return num * 2
  * }
 */
-const sum = (a,b) =>  { return a + b }; sum(4,5)
-const addFive = (num) => {return num + 5 }; addFive(5)// code here!
-const argTimesTwo = (num) => { return num * 2}; argTimesTwo(5)// code here!
+const sum = (a, b) =>  { return a + b }; sum(4,5); // code here!
+const addFive = (num) => {return num + 5 }; addFive(5);// code here!
+const argTimesTwo = (num) => { return num * 2}; argTimesTwo(5);// code here!
 
 /**
  * ### Challenge `carMaker`
