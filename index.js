@@ -217,7 +217,14 @@ function getModelYears(array) {
 */
 function getOlderCars(array, number) {
   /* code here */
-  return `${array.car_year}`
+  // return `${array.car_year}`
+  let max = [];
+  for (let year = 0; year < array.length; year++)
+   {
+    max.push(array[year].car_year <= number);
+    
+  }
+  return max;
 }
 
 /**
