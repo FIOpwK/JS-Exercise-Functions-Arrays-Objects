@@ -194,10 +194,13 @@ return array;
 */
 function getModelYears(array) {
   /* code here */
-  // cars = [];
+  let cars = [];
   // return cars.car_year;
-  return `${array.car_year}`
-
+  // return `${array.car_year}`
+  for (let i = 0; i < array.length; i++) {
+    cars.push(array[i].car_year)
+  }
+  return cars;
 }
 
 /**
@@ -230,11 +233,15 @@ function getOlderCars(array, number) {
 */
 function getGermanCars(array) {
   /* code here */
-  let models = ['Audi', 'Mercedes-Benz', 'Volkswagen', 'BMW'];
-  if (array.includes(models)) { return `${models}`
-
-  }
-
+  // let models = ['Audi', 'Mercedes-Benz', 'Volkswagen', 'BMW'];
+  let model = [];
+  // if (array.includes(models)) { return `${models}`
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].car_make === 'Audi' || array[i].car_make === 'Mercedes-Benz' || array[i].car_make === 'BMW' || array[i].car_make === 'Volkswagen') {
+      model.push(array[i]);
+    }
+     } 
+  return model;
 }
 
 /**
