@@ -194,7 +194,7 @@ return array;
 */
 function getModelYears(array) {
   /* code here */
-  let cars = [];
+  const cars = [];
   // return cars.car_year;
   // return `${array.car_year}`
   for (let i = 0; i < array.length; i++) {
@@ -218,13 +218,18 @@ function getModelYears(array) {
 function getOlderCars(array, number) {
   /* code here */
   // return `${array.car_year}`
-  let max = [];
+  const max = [];
+  // const min = [];
   for (let year = 0; year < array.length; year++)
    {
-    max.push(array[year].car_year <= number);
+     if (array.car_year < number ) {
+       return max.push(array[year].car_year)
+     }
+    // max.push(array[year].car_year) 
     
   }
   return max;
+  
 }
 
 /**
@@ -244,9 +249,14 @@ function getGermanCars(array) {
   let model = [];
   // if (array.includes(models)) { return `${models}`
   for (let i = 0; i < array.length; i++) {
-    if (array[i].car_make === 'Audi' || array[i].car_make === 'Mercedes-Benz' || array[i].car_make === 'BMW' || array[i].car_make === 'Volkswagen') {
+    if (array[i].car_make === 'Audi' || 
+        array[i].car_make === 'Mercedes-Benz' || 
+        array[i].car_make === 'BMW' || 
+        array[i].car_make === 'Volkswagen') {
+
       model.push(array[i]);
     }
+
      } 
   return model;
 }
