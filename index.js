@@ -169,9 +169,18 @@ function getCarInfoById(array, id) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * sortCarInventory returns an inventory that is sorted by car_model, ascending [A-Z].
 */
-function sortCarInventory(inventory) {
+function sortCarInventory(array) {
   /* code here */
   // return inventory.sort(A-Z);
+  // return `${array.sort(array.car_model)}`
+  array.sort(function(a, b){ 
+    if (a.car_model < b.car_model) {return -1};
+    if (b.car_model < a.car_model) {return 1};
+    return 0;
+
+  });
+return array;
+
 }
 
 /**
@@ -183,10 +192,12 @@ function sortCarInventory(inventory) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
-function getModelYears(cars) {
+function getModelYears(array) {
   /* code here */
-  cars = [];
-  return cars.car_year;
+  // cars = [];
+  // return cars.car_year;
+  return `${array.car_year}`
+
 }
 
 /**
@@ -201,8 +212,9 @@ function getModelYears(cars) {
  * with a `car_year` which is at most the given desired max year,
  * in the same order as they appear in the original inventory.
 */
-function getOlderCars(/* code here */) {
+function getOlderCars(array, number) {
   /* code here */
+  return `${array.car_year}`
 }
 
 /**
@@ -218,10 +230,11 @@ function getOlderCars(/* code here */) {
 */
 function getGermanCars(array) {
   /* code here */
-for (let i = 0; i < array.length; i++)
- {
-   return array
- } 
+  let models = ['Audi', 'Mercedes-Benz', 'Volkswagen', 'BMW'];
+  if (array.includes(models)) { return `${models}`
+
+  }
+
 }
 
 /**
@@ -260,7 +273,7 @@ const argTimesTwo = (num) => { return num * 2}; argTimesTwo(5);// code here!
  *         (1) causes the odometer in the object to be increased by the distance,
  *         (2) returns the updated value of the `odometer`.
 */
-function carMaker(odometer) {
+function carMaker() {
   /* code here */
   // for (d = 0; d < odometer; d++) {
 
