@@ -215,19 +215,20 @@ function getModelYears(array) {
  * with a `car_year` which is at most the given desired max year,
  * in the same order as they appear in the original inventory.
 */
-function getOlderCars(array, number) {
+function getOlderCars(array, year) {
   /* code here */
   // return `${array.car_year}`
   const max = [];
-  // const min = [];
-  for (let year = 0; year < array.length; year++)
+  
+  for (let number = 0; number < array.length; number++)
    {
-     if (array.car_year < number ) {
-       return max.push(array[year].car_year)
+     if (array[number].car_year <= year) {
+       max.push(array[number])
      }
-    // max.push(array[year].car_year) 
+
+     }
     
-  }
+  
   return max;
   
 }
@@ -281,8 +282,8 @@ function getGermanCars(array) {
  * }
 */
 const sum = (a, b) =>  { return a + b }; sum(4,5); // code here!
-const addFive = (num) => {return num + 5 }; addFive(5);// code here!
-const argTimesTwo = (num) => { return num * 2}; argTimesTwo(5);// code here!
+const addFive = num => {return num + 5 }; addFive(5);// code here!
+const argTimesTwo = num => { return num * 2}; argTimesTwo(5);// code here!
 
 /**
  * ### Challenge `carMaker`
@@ -297,12 +298,18 @@ const argTimesTwo = (num) => { return num * 2}; argTimesTwo(5);// code here!
  *         (1) causes the odometer in the object to be increased by the distance,
  *         (2) returns the updated value of the `odometer`.
 */
-function carMaker() {
+function carMaker(odometer) {
   /* code here */
-  // for (d = 0; d < odometer; d++) {
+  return {
+    odometer: odometer,
+    drive: function (distance) { 
+      for (distance = 0; distance < odometer.length; distance++) 
+      {return distance * odometer}
+    }
+    
+  }
 
-  //   return odometer
-  // }
+  
 }
 
 /// ////// END OF CHALLENGE /////////
